@@ -26,12 +26,13 @@ function renderProductsList(productsList) {
 }
 
 function getInfor() {
+  var id = document.querySelector("#maSP").value;
   var tenSP = document.querySelector("#TenSP").value;
   var giaSP = document.querySelector("#GiaSP").value;
   var hinhAnh = document.querySelector("#HinhSP").value;
   var moTa = document.querySelector("#loaiSP").value;
 
-  return new Product("", tenSP, giaSP, hinhAnh, moTa);
+  return new Product(id, tenSP, giaSP, hinhAnh, moTa);
 }
 
 function onLoading() {

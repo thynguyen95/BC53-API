@@ -84,9 +84,10 @@
             <!-- BEGIN TÌM KIẾM -->
             <div class="input-group mb-3">
               <input type="text" class="form-control" placeholder="Nhập từ khóa" aria-label="Recipient's username"
-                aria-describedby="basic-addon2" />
+                aria-describedby="basic-addon2" id="txtSearch" />
               <div class="input-group-append">
-                <span class="input-group-text" id="basic-addon2"><i class="fa fa-search"></i></span>
+                <span class="input-group-text" id="basic-addon2" onclick="searchProductByName()"><i
+                    class="fa fa-search"></i></span>
               </div>
             </div>
             <!-- END TÌM KIẾM -->
@@ -128,6 +129,10 @@
           </div>
           <!-- Modal body -->
           <div class="modal-body">
+            <div class="form-group">
+              <label>Mã Sản Phẩm</label>
+              <input id="maSP" class="form-control" placeholder="Mã sản phẩm" readonly />
+            </div>
             <div class="form-group">
               <label>Tên Sản Phẩm</label>
               <input id="TenSP" class="form-control" placeholder="Nhập vào tên sản phẩm" />
@@ -187,6 +192,9 @@
 
   <!-- MODEL -->
   <script src="../models/Product.js"></script>
+
+  <!-- services -->
+  <script src="../services/productsServ.js"></script>
 
   <!-- controllers -->
   <script src="../controllers/controller.js"></script>
